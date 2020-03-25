@@ -74,6 +74,7 @@ pub fn create(title:&str, content:&str, icon_type:IconType) {
     let alert_style = match icon_type {
         IconType::Error => NSAlertStyle::critical,
         IconType::Info => NSAlertStyle::informational,
+        IconType::Warning => NSAlertStyle::warning,
 
         // AppKit doesn't support NSAlert without any icon
         IconType::None => NSAlertStyle::informational,

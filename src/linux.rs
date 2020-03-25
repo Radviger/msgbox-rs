@@ -3,6 +3,7 @@ use ::gtk::prelude::*;
 use ::gtk::{ButtonsType, DialogFlags, MessageType, MessageDialog};
 
 use icon::IconType;
+use gtk::MessageType;
 
 pub fn create(title:&str, content:&str, icon_type:IconType) {
     if gtk::init().is_err() {
@@ -15,6 +16,7 @@ pub fn create(title:&str, content:&str, icon_type:IconType) {
         IconType::Error => MessageType::Error,
         IconType::Info => MessageType::Info,
         IconType::None => MessageType::Other,
+        IconType::Warning => MessageType::Warning
     };
 
     let dialog = MessageDialog::new(
