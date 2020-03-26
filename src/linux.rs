@@ -3,7 +3,6 @@ use ::gtk::prelude::*;
 use ::gtk::{ButtonsType, DialogFlags, MessageType, MessageDialog};
 
 use icon::IconType;
-use gtk::MessageType;
 
 pub fn create(title:&str, content:&str, icon_type:IconType) {
     if gtk::init().is_err() {
